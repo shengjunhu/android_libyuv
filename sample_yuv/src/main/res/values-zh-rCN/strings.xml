@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">android_sample_yuv</string>
+    <string name="txt_convert">Convert</string>
+    <string name="txt_hint">Please select yuv file</string>
+</resources>

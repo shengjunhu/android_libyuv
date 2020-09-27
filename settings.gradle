@@ -1,0 +1,3 @@
+rootProject.name = "android_sample_yuv"
+include ':sample_yuv'
+include ':libyuv'

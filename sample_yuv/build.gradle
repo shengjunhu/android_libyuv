@@ -1,0 +1,92 @@
+apply plugin: rootProject.ext.plugins.application
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+    defaultConfig {
+        applicationId rootProject.ext.android.applicationId
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+
+        ndk { abiFilters "armeabi-v7a", "arm64-v8a" }
+        testInstrumentationRunner rootProject.ext.dependencies.testInstrumentationRunner
+    }
+
+    signingConfigs {
+        config {
+            keyAlias 'LibYuv'
+            keyPassword 'LibYuv'
+            storeFile file('android.jks')
+            storePassword 'LibYuv'
+        }
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            signingConfig signingConfigs.config
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled true
+            shrinkResources true
+            zipAlignEnabled true
+            debuggable false
+            jniDebuggable false
+            signingConfig signingConfigs.config
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+        checkReleaseBuilds false
+        warning 'InvalidPackage'
+        disable 'GoogleAppIndexingWarning'
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "LibYuv_v${variant.versionCode}.apk"
+        }
+    }
+
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    //Test
+    testImplementation rootProject.ext.dependencies.testJunit
+    androidTestImplementation rootProject.ext.dependencies.testExt
+    androidTestImplementation rootProject.ext.dependencies.testEspresso
+
+    //Jetpack
+    implementation rootProject.ext.dependencies.core
+    implementation rootProject.ext.dependencies.multidex
+    implementation rootProject.ext.dependencies.appcompat
+    implementation rootProject.ext.dependencies.constraint_layout
+
+    //LeakCanary
+    //debugImplementation rootProject.ext.dependencies.leak_canary
+
+    //libyuv
+    //implementation project(path: ':libyuv')
+    implementation(name: 'lib_yuv_v20092716_release', ext: 'aar')
+}
