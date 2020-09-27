@@ -50,7 +50,7 @@ Please compliance with the libyuv license
 
 [1]: https://chromium.googlesource.com/libyuv/libyuv
 [2]: doc/img/android_logo.png
-[3]: doc/apk/LibYuv_v20092717.apk
+[3]: doc/apk/LibYuv_v20092718.apk
 [4]: doc/file/getting_started.md
 [5]: doc/file/formats.md
 [6]: doc/file/rotation.md

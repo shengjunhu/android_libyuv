@@ -17,7 +17,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-import com.hsj.sample.yuv.R;
+import com.hsj.sample.R;
 import com.hsj.yuv.YUV;
 import java.io.File;
 
