@@ -1,8 +1,7 @@
-package com.hsj.sample.yuv;
+package com.hsj.sample;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.FileProvider;
-
 import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.Intent;
@@ -18,10 +17,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.hsj.sample.yuv.R;
 import com.hsj.yuv.YUV;
-
 import java.io.File;
 
 /**
