@@ -2,7 +2,7 @@
 android sample of yuv
 developed based on the [chromium/libyuv][1]
 
-### Image
+### Screenshot
 <img src="doc/img/screenshot_1.png" width="200"/> <img src="doc/img/screenshot_2.png" width="200"/> <img src="doc/img/screenshot_3.png" width="200"/>
 
 ### Sample
