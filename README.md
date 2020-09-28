@@ -6,7 +6,7 @@ developed based on the [chromium/libyuv][1]
 <img src="doc/img/screenshot_1.png" width="200px"/> <img src="doc/img/screenshot_2.png" width="200px"/> <img src="doc/img/screenshot_3.png" width="200px"/>
 
 ### Sample
-| <img src="/preview/icon/apk-qr.png" width="260px" /> |
+| <img src="doc/img/android_logo.png" width="260px" /> |
 | :--------:             |
 | 扫码 or [点击下载][3]]  |
 
