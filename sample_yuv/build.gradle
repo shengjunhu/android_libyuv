@@ -58,7 +58,7 @@ android {
 
     applicationVariants.all { variant ->
         variant.outputs.all {
-            outputFileName = "LibYuv_v${variant.versionCode}.apk"
+            outputFileName = "sample_yuv_v${variant.versionCode}.apk"
         }
     }
 

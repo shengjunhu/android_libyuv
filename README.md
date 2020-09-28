@@ -3,10 +3,12 @@ android sample of yuv
 developed based on the [chromium/libyuv][1]
 
 ### Screenshot
-<img src="doc/img/screenshot_1.png" width="200"/> <img src="doc/img/screenshot_2.png" width="200"/> <img src="doc/img/screenshot_3.png" width="200"/>
+<img src="doc/img/screenshot_1.png" width="200px"/> <img src="doc/img/screenshot_2.png" width="200px"/> <img src="doc/img/screenshot_3.png" width="200px"/>
 
 ### Sample
-[![APK][2]][3]
+| <img src="/preview/icon/apk-qr.png" width="260px" /> |
+| :--------:             |
+| 扫码 or [点击下载][3]]  |
 
 ### Add Function
 
@@ -31,10 +33,10 @@ developed based on the [chromium/libyuv][1]
 ### About Build
 * NDK
 * CMake
-* [start][4]
-* [formats][5]
-* [rotation][6]
-* [filter][7]
+* [doc_start][4]
+* [doc_formats][5]
+* [doc_rotation][6]
+* [doc_filter][7]
 
 ### About Author:
 * Author: shengjunhu
@@ -50,7 +52,7 @@ Please compliance with the libyuv license
 
 [1]: https://chromium.googlesource.com/libyuv/libyuv
 [2]: doc/img/android_logo.png
-[3]: doc/apk/LibYuv_v20092718.apk
+[3]: https://github.com/shengjunhu/android_sample_yuv/raw/master/doc/apk/sample_yuv_v20092718.apk
 [4]: doc/file/getting_started.md
 [5]: doc/file/formats.md
 [6]: doc/file/rotation.md
