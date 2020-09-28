@@ -7,8 +7,8 @@ developed based on the [chromium/libyuv][1]
 
 ### Sample
 | <img src="doc/img/android_logo.png" width="260px" /> |
-| :--------:             |
-| 扫码 or [点击下载][3]]  |
+| :--------:                      |
+| Scan QR code or [Download][3]   |
 
 ### Add Function
 
