@@ -14,7 +14,7 @@ developed based on the [chromium/libyuv][1]
 
 * 1-Add `YUV` API with `covert(...)`;
 ```java
- private static byte[] covert(byte[] src_data, int src_format,
+ public static byte[] covert(byte[] src_data, int src_format,
                               int src_width, int src_height,
                               int crop_x, int crop_y,
                               int des_width, int des_height,
@@ -22,7 +22,7 @@ developed based on the [chromium/libyuv][1]
                               int des_filter,int des_format)
 ```
 ```java
- private static byte[] covert(File src_file, int src_format,
+ public static byte[] covert(File src_file, int src_format,
                               int src_width, int src_height,
                               int crop_x, int crop_y,
                               int des_width, int des_height,
