@@ -36,22 +36,15 @@ LOCAL_SRC_FILES := \
     source/scale_common.cc      \
     source/video_common.cc
 
-LOCAL_SRC_FILES +=native_yuv.cpp
+LOCAL_SRC_FILES += native_yuv.cpp
 
-ifeq ($(TARGET_ARCH_ABI),$(filter $(TARGET_ARCH_ABI), x86 x86_64))
-    LOCAL_SRC_FILES += \
-        source/compare_gcc.cc       \
-        source/rotate_gcc.cc        \
-        source/row_gcc.cc           \
-        source/scale_gcc.cc
-
-else ifeq ($(TARGET_ARCH_ABI),$(filter $(TARGET_ARCH_ABI), armeabi armeabi-v7a))
+ifeq ($(TARGET_ARCH_ABI),armeabi-v7a)
     LOCAL_CFLAGS += -DLIBYUV_NEON
     LOCAL_SRC_FILES += \
-        source/compare_neon.cc.neon  \
-        source/rotate_neon.cc.neon   \
-        source/row_neon.cc.neon      \
-        source/scale_neon.cc.neon
+        source/compare_neon.cc  	\
+        source/rotate_neon.cc   	\
+        source/row_neon.cc      	\
+        source/scale_neon.cc
 
 else ifeq ($(TARGET_ARCH_ABI),arm64-v8a)
     LOCAL_CFLAGS += -DLIBYUV_NEON
@@ -59,7 +52,7 @@ else ifeq ($(TARGET_ARCH_ABI),arm64-v8a)
         source/compare_neon64.cc    \
         source/rotate_neon64.cc     \
         source/row_neon64.cc        \
-        source/scale_neon64.cc 
+        source/scale_neon64.cc
 
 endif
 
