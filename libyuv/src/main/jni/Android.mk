@@ -38,6 +38,7 @@ LOCAL_SRC_FILES := \
 
 LOCAL_SRC_FILES += native_yuv.cpp
 
+#//Add `$(filter $(TARGET_ARCH_ABI), armeabi armeabi-v7a)` instead `armeabi-v7a` if need `armeabi`
 ifeq ($(TARGET_ARCH_ABI),armeabi-v7a)
     LOCAL_CFLAGS += -DLIBYUV_NEON
     LOCAL_SRC_FILES += \
